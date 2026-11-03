@@ -1,0 +1,64 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "rune-org",
+  "items": [
+    {
+      "name": "dot-loader",
+      "type": "registry:ui",
+      "title": "Dot Loader",
+      "description": "Three dots that fade in turn, a quiet loading state that respects reduced motion.",
+      "registryDependencies": [
+        "utils"
+      ],
+      "files": [
+        {
+          "path": "registry/rune-org/dot-loader.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dot-loader-demo",
+      "type": "registry:example",
+      "title": "Dot Loader Demo",
+      "registryDependencies": [
+        "dot-loader"
+      ],
+      "files": [
+        {
+          "path": "registry/rune-org/examples/dot-loader-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "copy-field",
+      "type": "registry:ui",
+      "title": "Copy Field",
+      "description": "A read-only field with a copy button that says Copied for a moment after a click.",
+      "registryDependencies": [
+        "utils"
+      ],
+      "files": [
+        {
+          "path": "registry/rune-org/copy-field.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "copy-field-demo",
+      "type": "registry:example",
+      "title": "Copy Field Demo",
+      "registryDependencies": [
+        "copy-field"
+      ],
+      "files": [
+        {
+          "path": "registry/rune-org/examples/copy-field-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    }
+  ]
+}

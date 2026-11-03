@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dot-loader",
+  "type": "registry:ui",
+  "title": "Dot Loader",
+  "description": "Three dots that fade in turn, a quiet loading state that respects reduced motion.",
+  "registryDependencies": [
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/rune-org/dot-loader.tsx",
+      "type": "registry:ui",
+      "content": "import * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport function DotLoader({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {\n  return (\n    <div role=\"status\" aria-label=\"Loading\" className={cn(\"flex items-center gap-1.5\", className)} {...props}>\n      {[0, 1, 2].map((i) => (\n        <span\n          key={i}\n          className=\"size-2 rounded-full bg-current motion-safe:animate-pulse\"\n          style={{ animationDelay: `${i * 200}ms` }}\n        />\n      ))}\n    </div>\n  );\n}\n"
+    }
+  ]
+}

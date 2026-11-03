@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "copy-field",
+  "type": "registry:ui",
+  "title": "Copy Field",
+  "description": "A read-only field with a copy button that says Copied for a moment after a click.",
+  "registryDependencies": [
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/rune-org/copy-field.tsx",
+      "type": "registry:ui",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport function CopyField({ value, className }: { value: string; className?: string }) {\n  const [copied, setCopied] = React.useState(false);\n  return (\n    <div className={cn(\"flex w-80 items-center gap-2 rounded-lg border border-neutral-700 bg-neutral-900 p-1.5 pl-3\", className)}>\n      <code className=\"flex-1 truncate text-sm text-neutral-200\">{value}</code>\n      <button\n        type=\"button\"\n        onClick={async () => {\n          await navigator.clipboard.writeText(value).catch(() => {});\n          setCopied(true);\n          setTimeout(() => setCopied(false), 1500);\n        }}\n        className=\"rounded-md bg-neutral-100 px-3 py-1.5 text-sm font-medium text-neutral-900\"\n      >\n        {copied ? \"Copied\" : \"Copy\"}\n      </button>\n    </div>\n  );\n}\n"
+    }
+  ]
+}

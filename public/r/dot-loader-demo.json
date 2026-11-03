@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dot-loader-demo",
+  "type": "registry:example",
+  "title": "Dot Loader Demo",
+  "registryDependencies": [
+    "dot-loader"
+  ],
+  "files": [
+    {
+      "path": "registry/rune-org/examples/dot-loader-demo.tsx",
+      "type": "registry:example",
+      "content": "import { DotLoader } from \"@/registry/rune-org/dot-loader\";\n\nexport default function DotLoaderDemo() {\n  return <DotLoader className=\"text-neutral-500\" />;\n}\n"
+    }
+  ]
+}

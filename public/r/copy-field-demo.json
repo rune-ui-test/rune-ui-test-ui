@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "copy-field-demo",
+  "type": "registry:example",
+  "title": "Copy Field Demo",
+  "registryDependencies": [
+    "copy-field"
+  ],
+  "files": [
+    {
+      "path": "registry/rune-org/examples/copy-field-demo.tsx",
+      "type": "registry:example",
+      "content": "import { CopyField } from \"@/registry/rune-org/copy-field\";\n\nexport default function CopyFieldDemo() {\n  return <CopyField value=\"npx layro-cli add @rune-org/copy-field\" />;\n}\n"
+    }
+  ]
+}
